@@ -65,20 +65,21 @@ int main( int argc, char *argv[] )
     status = MPI_Alltoall(sb, chunk, MPI_INT, rb, chunk, MPI_INT, MPI_COMM_WORLD);
     MPI_Allreduce( &status, &gstatus, 1, MPI_INT, MPI_SUM, MPI_COMM_WORLD );
     
+    // MPI_Barrier(MPI_COMM_WORLD);
     if (rank == 0) {
         printf("all_to_all executed and returned %d\n",gstatus);fflush(stdout);
-        
+
         // printing messages of send buffer
         printf("Send Buffer = [ ");
-        for (int j=0 ; i < size*chunk ; ++i )
-            printf("%d, ", sb[i]);
-        printf("\b\b ]");
+        for (int j=0 ; j < size*chunk ; j++ )
+            printf("%d, ", sb[j]);
+        printf(" ]\n");
 
         // printing messages of recieve buffer
         printf("Recieve Buffer = [ ");
         for( int k=0; k < size*chunk; k++ )
             printf("%d, ", rb[i]);
-        printf(" ]");
+        printf(" ]\n");
     }
 
     // Clean up
