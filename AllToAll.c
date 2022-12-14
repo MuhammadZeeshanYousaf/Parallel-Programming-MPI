@@ -1,3 +1,6 @@
+// Sample MPI program for All-to-All broadcast and All-to-one reduction
+// Name: Muhammad Zeeshan Yousaf
+
 #include "mpi.h"
 #include <stdlib.h>
 #include <stdio.h>
