@@ -1,0 +1,13 @@
+Tasks of MPI:
+
+
+> Single linear search
+> Linear search with reduce
+> Sieve Block partitioning
+> Sieve cyclic partitioning
+> Scatter sample 
+> Gather sample
+> Floyd Algo implementation 
+> Gather V
+> All-to-All sample
+
